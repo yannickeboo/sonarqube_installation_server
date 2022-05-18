@@ -56,4 +56,45 @@ sudo ufw reload
 
 
 # Connect Sonarqube to postgres Server
+## 1- setup postgresdb
+### Go on postgress Server and Create  sonarqube user and grant it access
+```
+sudo su - postgres
+psql
+```
+### create database named sonarqubedb
+```
+create database sonarqubedb;
+```
+### Create user for the database named sonaruser
+```
+create user sonaruser with encrypted password 'sonarpasswd';
+```
+### Grant all privileges to sonaruser on sonarqubedb
+```
+grant all privileges on database sonarqubedb to sonaruser;
+\q
+exit
+```
+### restart postgresdb
+```
+systemctl restart postgresql
+```
+## 2- setup sonarqube
+###
+```
+cd /opt/sonarqube-9.4.0.54424/conf
+vim sonar.properties
+```
+### look for the and put 
+### sonar.jdbc.username=sonaruser
+### sonar.jdbc.password=sonarpasswd
+### put the url and the database
+![image](https://user-images.githubusercontent.com/85393914/169111070-17c7b0d6-5414-47b4-9c62-018bde2c560e.png)
+
+## Go to your postgres db and:
+```
+![image](https://user-images.githubusercontent.com/85393914/169116572-544ca422-191d-4a89-a422-c8ae7a6cdfb7.png)
+```
+
 

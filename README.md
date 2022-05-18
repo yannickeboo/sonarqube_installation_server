@@ -18,6 +18,8 @@ java --version
 cd /opt
 wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip
 apt install unzip -y
+```
+```
 unzip sonarqube-9.4.0.54424.zip
 ```
 # 3- Starting Sonarqube

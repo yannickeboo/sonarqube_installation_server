@@ -93,8 +93,8 @@ vim sonar.properties
 ![image](https://user-images.githubusercontent.com/85393914/169111070-17c7b0d6-5414-47b4-9c62-018bde2c560e.png)
 
 ## Go to your postgres db and:
-```
+
 ![image](https://user-images.githubusercontent.com/85393914/169116572-544ca422-191d-4a89-a422-c8ae7a6cdfb7.png)
-```
+
 
 
